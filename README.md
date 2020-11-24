@@ -12,6 +12,11 @@ There are several ways to launch the game. Here is the simplest:
 4. Open 'localhost:8000' in your browser
 5. Enjoy!
 
+## Debugging in Vscode + Chrome
+- Chrome must be launched with "--remote-debugging-port=9222"
+- Define an "Attach to Chrome" launch config
+- Use "urlFilter": "http://localhost:5500/*"  (if using Live Server).  Don't use "url":
+
 ### License
 
 I don't believe in them. You can order your bits however you please.

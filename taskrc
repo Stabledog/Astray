@@ -1,0 +1,18 @@
+# taskrc for Astray
+# vim: filetype=sh :
+
+function chrome {
+    #Help
+    [[ -f $taskrc_dir/chrome ]] || ln -sf '/cygdrive/c/Program Files (x86)/Google/Chrome/Application/chrome.exe'
+    $taskrc_dir/chrome "$@"
+}
+
+function chrome-for-debug  {
+    #Help
+    local args="--remote-debugging-port=9222 $@"
+    echo "Running Chrome in debug mode, args=$args"
+    chrome $args
+}
+
+alias chrome-dbg-run-astray='chrome-for-debug "http://localhost:5500/Astray"'
+#Help
